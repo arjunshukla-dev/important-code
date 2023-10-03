@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript form validation</title>
+
+    <style>
+        body {
+            padding: 10px 50px;
+            background: rgb(222, 121, 242);
+        }
+
+        .formDesign {
+            font-size: 20px;
+        }
+
+        .formDesign input {
+            width: 50%;
+            padding: 12px 20px;
+            margin: 40px;
+            border: 1px solid #ffff;
+            border-radius: 30px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .formerror {
+            color: red;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            margin: 10px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the best form on internet</h1>
+    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="formDesign" id="name">
+            Name: <input type="text" name="fname" placeholder="Enter your name" required><b><span
+                    class="formerror"></span></b>
+        </div>
+
+        <div class="formDesign" id="email">
+            Email: <input type="email" name="femail" placeholder="Enter your email"><b><span
+                    class="formerror"></span></b>
+        </div>
+
+        <div class="formDesign" id="phone">
+            Phone: <input type="phone" name="fphone" placeholder="Enter your phone"><b><span
+                    class="formerror"></span></b>
+        </div>
+
+        <div class="formDesign" id="password">
+            Password: <input type="password" name="fpassword" placeholder="Enter your password"><b><span
+                    class="formerror"></span></b>
+        </div>
+
+        <div class="formDesign" id="cpassword">
+            Password: <input type="password" name="fcpassword" placeholder="Enter your confirm password"><b><span
+                    class="formerror"></span></b>
+        </div>
+
+        <input class="btn" type="submit" value="Submit">
+    </form>
+    
+</body>
+<script>
+    function clearErrors(){
+        errors = document.getElementsByClassName('formerror');
+        for(let item of errors)
+        {
+            item.innerHTML = "";
+        }
+    };
+    function seterror(id, error) {
+        // set error inside tag of id
+        element = document.getElementById(id);
+        element.getElementsByClassName('formerror')[0].innerHTML = error;
+    };
+
+    function validateForm() {
+
+        var returnval = true;
+        clearErrors();
+        // perform validation and if validation fails, set the value of returnval to false
+
+        var name = document.forms['myForm']["fname"].value;
+
+        if (name.length < 5) {
+            seterror("name", "Length of name is too short");
+            returnval = false;
+        }
+
+        var email = document.forms['myForm']["femail"].value;
+
+        if (email.length > 15) {
+
+            seterror("email", "Email Length  is too long");
+            returnval = false;
+        }
+        var phone = document.forms['myForm']["fphone"].value;
+
+        if (phone.length != 10) {
+
+            seterror("phone", "Phone Length  is too long");
+            returnval = false;
+        }
+
+        var password = document.forms['myForm']["fpassword"].value;
+
+        if (password.length < 8) {
+
+            seterror("password", "Password should be atleast 8 characters long");
+            returnval = false;
+        }
+
+        var cpassword = document.forms['myForm']["fcpassword"].value;
+
+        if (cpassword != password) {
+
+            seterror("cpassword", "Password and Confirm password should match");
+            returnval = false;
+        }
+        return returnval;
+    };
+</script>
+</html>
