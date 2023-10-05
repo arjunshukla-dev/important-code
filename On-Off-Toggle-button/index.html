@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Toggle Button</title>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle">
+            <div class="toggle-button" onclick="animatedToggle()"></div>
+        </div>
+        <div class="text">OFF</div>
+    </div>
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const text = document.querySelector(".text");
+        function animatedToggle(){
+            toggle.classList.toggle("active");
+            if(toggle.classList.contains("active")){
+                text.innerHTML = "ON";
+            }
+            else{
+                text.innerHTML = "OFF";
+            }
+        }
+    </script>
+</body>
+</html>
