@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <button onclick="selectList()">Click ME</button>
+    <script>
+        // var p1 = document.querySelector("p")
+
+        // var arr = ['Mohan','Rahul','Suresh','Aman']
+        // var result = " ";
+        // for( var a of arr)
+        // {
+        //     //console.log(a)
+        //     result=result + " " + a;
+
+        //     p1.innerHTML= result;
+        // }
+        // console.log(result)
+
+        // var result = "<ul>";
+        // for (var i=0; i<arr.length; i++)
+        // {
+        //     result=result+"<li> "+arr[i]+"</li>"
+        //     //console.log(result)
+
+        // }
+        //result+=arr[i]"</ul>"
+        // p1.innerHTML=result;
+
+
+        // var r=""
+        // for(var b of arr)
+        // {
+        //     r=r+b;
+        //      console.log(r)
+
+        //      p1.innerHTML=r;
+        // }
+
+        
+        function selectList() {
+            var p1 = document.querySelector("p")
+
+            var arr = ['Mohan', 'Rahul', 'Suresh', 'Aman']
+            var x="<select>"
+
+            for (var a of arr) {
+                x += "<option>" +a+ "</option>";
+                console.log(x);
+
+            }
+            x+=a+"</select>"
+            p1.innerHTML = x;
+        }
+
+    </script>
+</body>
+
+</html>

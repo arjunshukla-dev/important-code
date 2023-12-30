@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #212121;">
+    <p style="background: #52c66770;color: #fff;font-size: 20px;"></p>
+    <script>
+        var arr = []
+       
+        for(var i=0; i<5; i++)
+        {
+            var userInput = prompt("Enter your data in insert in Array")
+            arr[i]=userInput;
+        }
+       
+        var p1 = document.querySelector("p")
+        var res = "<select>"
+        for(var a of arr){
+            res = res+"<option>" +a+ "</option>"
+        }
+        res+="</select>"
+        p1.innerHTML=res;
+    </script>
+</body>
+</html>

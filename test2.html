@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Test</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            width: 350px;
+            height: 250px;
+            background: #4071f4;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .box1 {
+            width: 350px;
+            height: 250px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .inp {
+            width: 85%;
+            height: 45px;
+            margin-top: 30px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid gray;
+            font-size: 17px;
+            padding-left: 10px;
+
+        }
+
+        .btn {
+            width: 85%;
+            height: 45px;
+            color: #fff;
+            background: #4071f4;
+            margin-top: 10px;
+            border: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <input type="password" placeholder="Create password" class="inp" id="inp1"><br>
+            <input type="password" placeholder="Confirm password" class="inp" id="inp2"><br>
+            <span style="display: inline-block; margin-right: 100px;margin-top: 5px;color: gray;">Use at least 8
+                characters</span>
+
+            <button class="btn" id="btn1" onclick="validate()">Check</button>
+        </div>
+    </div>
+    <script>
+
+        var t1 = document.querySelector("#inp1")
+        var t2 = document.querySelector("#inp2")
+        var btn = document.querySelector("#btn1")
+
+        function validate() {
+            var a = t1.value.length;
+            var b = t2.value.length;
+
+            // if(t1.value.length == t2.value.length && t1.value.length==8)
+            if (a == b && a==8) {
+                alert("Password valied")
+            }
+
+            else {
+                alert("password invalid")
+            }
+
+        }
+    </script>
+</body>
+
+</html>

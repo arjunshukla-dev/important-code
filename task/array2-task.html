@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="a" value="DropDown" onclick="demo(this)">DropDownList
+    <input type="radio" name="a" value="UL" onclick="demo(this)">UL
+    <input type="radio" name="a" value="OL" onclick="demo(this)">OL
+    <br>
+    <p id="p"></p>
+
+    <script>
+        //var arr = ['HTML','CSS','JAVASCRIPT','C','PYTHON','JAVA','PHP','C++','LARAVEL','.NET']
+        
+
+        
+        function demo(x)
+        {
+            //console.log(x)
+         var arr = ['JAVA','PHP','C++','LARAVEL']
+            var color=['RED','GREEN','YELLOW','AQUA']
+            var color1 = ['navy','pink','red','maroon']
+         var v=x.value;
+        if(v=="DropDown")
+        {
+            var res="<select>";
+
+                arr.forEach(function(data,i){
+                    res+="<option style='background: "+color[i]+";color:"+color1[i]+"'>"+data+"</option>"
+                })
+                res+="</select>";    
+        }
+
+        if(v=="UL")
+        {
+            var res="<ul>";
+
+                arr.forEach(function(data,i){
+                    res+="<li style='background: "+color[i]+";color:"+color1[i]+"'>"+data+"</li>"
+                })
+                res+="</ul>";    
+        }
+
+        if(v=="OL")
+        {
+            var res="<ol>";
+
+                arr.forEach(function(data,i){
+                    res+="<li style='background: "+color[i]+";color:"+color1[i]+"'>"+data+"</li>"
+                })
+                res+="</ol>";    
+        }
+
+
+        p.innerHTML=res;
+        }
+    
+
+    </script>
+</body>
+</html>

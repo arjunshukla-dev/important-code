@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        Username<br>
+        <input type="text" id="name">
+        <span id="msg1"></span><br>
+        Email<br>
+        <input type="email" id="email">
+        <span id="msg2"></span><br>
+        password<br>
+        <input type="password" id="pass">
+        <span id="msg3"></span><br>
+        <button onclick="demo()">getValue</button>
+    </div>
+    <script>
+        function demo() {
+            var x = document.getElementById('name')
+            var y = document.getElementById('email')
+            var z = document.getElementById('pass')
+            var m1 = document.getElementById('msg1')
+            var m2 = document.getElementById('msg2')
+            var m3 = document.getElementById('msg3')
+
+            m1.innerText = x.value;
+            m2.innerText = y.value;
+            m3.innerText = z.value;
+
+            m1.style.color = 'red';
+            m2.style.color = 'blue';
+            m3.style.color = 'brown';
+            
+            const container = document.getElementById('container')
+            container.remove();
+        }
+    </script>
+</body>
+
+</html>

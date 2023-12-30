@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <style>
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .box1 {
+            background: aqua;
+            padding: 20px;
+        }
+
+        button {
+            width: 45px;
+            height: 30px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: inset 0px 0px 5px gray;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <h1>Simple Calculator using JS</h1>
+            <hr>
+            <label>Enter 1st value:</label>
+            <input type="number" id="t1"><br><br>
+            <label>Enter 1st value:</label>
+            <input type="number" id="t2"><br><br>
+            <label>Result :</label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <input type="text" id="t3"><br><br>
+            <button onclick="calculate(this)">+</button>
+            <button onclick="calculate(this)">-</button>
+            <button onclick="calculate(this)">*</button>
+            <button onclick="calculate(this)">/</button>
+            <button onclick="calculate(this)">%</button>
+            <hr>
+        </div>
+
+    </div>
+    <script>
+
+
+
+
+        //alert(num1)
+        function calculate(r) {
+            var num1 = document.querySelector("#t1").value;
+            var num2 = document.querySelector("#t2").value;
+            var result = document.querySelector("#t3").value;
+            v = r.innerHTML;
+            if (v == "+") {
+                
+                 result = parseInt(num1) + parseInt(num2);
+                 t3.value=result;
+                
+            }
+            if (v == "-") {
+                
+                result = parseInt(num1) - parseInt(num2);
+                t3.value=result;
+               
+           }
+           if (v == "*") {
+                
+                result = parseInt(num1) * parseInt(num2);
+                t3.value=result;
+               
+           }
+           if (v == "/") {
+                
+                result = parseInt(num1) / parseInt(num2);
+                t3.value=result;
+               
+           }
+           if (v == "%") {
+                
+                result = parseInt(num1) % parseInt(num2);
+                t3.value=result;
+               
+           }
+        }        
+    </script>
+</body>
+
+</html>

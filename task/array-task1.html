@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-task1</title>
+    <style>
+        .tbl{
+            border-collapse: collapse;
+        }
+        .tbl,
+        .tbl th,
+        .tbl td{
+            border: 2px solid #000;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+     <p></p> 
+    <button onclick="demo()">click me</button>
+    <script>
+         function demo()
+         {
+            var p1 = document.querySelector("p")
+            
+            var head = ['StuName','Mobile','College','City','Pincode','faname','Rollno','Marks','Department','Fees']
+            var stuname = ['Ram','Shyam','Raju','Rinku','Rani','Riya','Sumit','Suraj','Palak','Mohan']
+            var mobile = [765445454,76343434,7865434,76544324,8766554,89676545,765436,8767565,6443348,87765567]
+            var college = ['IIM','GPU','LPSP','IIT','UPES','LPU','AMITY','VIT','BHU','MAHE']
+            var city = ['Lucknow','Unnao','kanpur','Delhi','Agra','Kannauj','Aligarh','Noida','Kolkata','Mumbai']
+            var pincode = [2121,343443,566565,878787,232332,545454,767676,121212,656566,7474747]
+            var faname = ['Ramesh','Suresh','Jay','Naresh','Rahul','Gaurav','Amit','Aman','Bhanu','Nilesh']
+            var rollno = [101,102,103,104,105,106,107,108,109,1010]
+            var marks = [285,365,345,540,280,320,430,275,308,282]
+            var department = ['CS','IT','CS','IT','CS','IT','CS','IT','CS','IT']
+            var fees = [2000, 3000,4000,5000,10000,6000,7000,8000,9000,3500]
+
+            var table= "<table class='tbl'>"
+                table = table + "<tr>";
+                    for(var i=0;i<head.length; i++)
+                    {
+                        table += "<th>" + head[i] + "</th>"
+                    }
+                    table +="</tr>";
+
+                    for(var j=0; j <stuname.length; j++)
+                    {
+                        table += "<tr>";
+                            table += "<td>" +stuname[j]+"</td>";
+                            table += "<td>" +mobile[j]+ "</td>";
+                            table += "<td>" +college[j]+ "</td>";
+                            table += "<td>" +city[j]+ "</td>";
+                            table += "<td>" +pincode[j]+ "</td>";
+                            table += "<td>" +faname[j]+ "</td>";
+                            table += "<td>" +rollno[j]+ "</td>";
+                            table += "<td>" +marks[j]+ "</td>";
+                            table += "<td>" +department[j]+ "</td>";
+                            table += "<td>" +fees[j]+ "</td>";
+                            table += "</tr>"
+
+                    }
+                    table += "</table>"; 
+                    p1.innerHTML=table
+                    
+           
+
+
+         }
+    </script>
+</body>
+</html>

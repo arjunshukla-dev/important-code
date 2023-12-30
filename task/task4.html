@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task4</title>
+</head>
+
+<body>
+    <select id="txt">
+        <option>Select Training</option>
+        <option>SummerTraining</option>
+        <option>ApperenticeShip</option>
+        <option>Industrial Training</option>
+    </select>
+    <input type="text" id="sp">
+    <button onclick="demo()" id="btn">ClickMe</button>
+    <script>
+        function demo() {
+            var a = document.querySelector("#txt")
+            var msg = document.querySelector("#sp")
+            var btn = document.querySelector("#btn")
+
+           var b= a.value;
+           if(b=="SummerTraining")
+           {
+             msg.value="5500"
+             a.style.border="2px solid brown"
+             msg.style.border="2px solid green"
+             btn.style.background="gray"
+             btn.style.color="#fff"
+             btn.style.padding="10px "
+           }
+           else if(b =="ApperenticeShip")
+           {
+             msg.value="20000"
+           }
+           else if(b=="Industrial Training")
+           {
+            msg.value="4000"
+           }
+           else{
+            alert("please select items")
+           }
+
+        }
+    </script>
+</body>
+
+</html>

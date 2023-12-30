@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="he1">Ram</h1>
+    <h1 id="he2">Mohan</h1>
+    <h1 id="he3">Amit</h1>
+    <h1 id="he4">Nitin</h1>
+    <!-- <button onclick="demo()">click</button> -->
+
+    <script>
+        function demo()
+        {
+            var t1 = document.querySelector("#he1")
+            var t2 = document.querySelector("#he2")
+            var t3 = document.querySelector("#he3")
+            var t4 = document.querySelector("#he4")
+
+            var a = t1.innerText;
+            var b= t2.innerText;
+            var c=t3.innerText;
+            var d=t4.innerText;
+
+            t1.innerText=d;
+            t2.innerText=a;
+            t3.innerText=b;
+            t4.innerText=c;
+
+        }
+        setInterval("demo()",1000)
+    </script>
+</body>
+</html>

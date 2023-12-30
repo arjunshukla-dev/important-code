@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <p></p>
+    <span></span>
+    <body>
+        <script>
+            var demo =(...x)=>
+            {
+                var p = document.querySelector("p")
+                
+                var res="<select onchange='demo1(this)'>"
+                for(var a of x)
+                {
+                    res+="<option>" +a+ "</option>"
+                    //console.log(res)
+                }
+                res+=a+"</select>"
+                p.innerHTML=res;
+            }
+            demo('HTML','CSS','JAVASCRIPT','JQUERY','BOOTSTRAP')
+            //console.log(x)
+            
+            var demo1 = (ddl) =>
+            {
+                //var ddl = document.querySelector("select")
+                var sp = document.querySelector("span")
+
+                sp.innerHTML= ` selected value : ${ddl.value}`
+            }
+
+        </script>
+    </body>
+</html>

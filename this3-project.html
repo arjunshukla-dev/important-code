@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-code/css/bootstrap.min.css">
+    <style>
+        .imgSmall{
+            max-height: 150px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <img src="../pictures/bird1.jpg" alt="" id="imgB" class="img-thumbnail">
+            </div>
+            <div class="col-sm-4">
+                <img src="../pictures/tree-hand.jpg" alt="" onmouseleave="demo1()" onmouseover="demo(this)" class="img-thumbnail imgSmall">
+                <img src="../pictures/flower1.jpg" alt="" onmouseleave="demo1()" onmouseover="demo(this)" class="img-thumbnail imgSmall">
+                <img src="../pictures/forest1.jpg" alt="" onmouseleave="demo1()" onmouseover="demo(this)" class="img-thumbnail imgSmall">
+                <img src="../pictures/monkey1.jpg" alt="" onmouseleave="demo1()" onmouseover="demo(this)" class="img-thumbnail imgSmall">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function demo(r)
+        {
+            var imBig = document.getElementById("imgB").src=r.src;
+           
+        }
+
+        function demo1()
+        {
+            document.querySelector("#imgB").src="../pictures/bird1.jpg"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 350px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/img3.jpg" alt="" id="im1" onclick="demo(this)"><br><br>
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <img src="" alt="" onmouseover="imgChanger(this)">
+    <script>
+        
+        function imgChanger(ref)
+        {
+            //alert(ref.src)
+            ref.src=x;
+        }
+        function demo(im1)
+        {
+            x=im1.src
+        }
+
+    </script>
+</body>
+</html>

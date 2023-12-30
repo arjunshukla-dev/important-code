@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 400px;
+            width: 900px;
+            padding: 25px;
+            border: 10px groove orange;
+            box-shadow: 0px 0px 20px black inset;
+            border-radius: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <img src="images/img3.jpg" alt="" id="img1">
+    </center>
+    <script>
+        var arr = ['bird1.jpg','monkey1.jpg','flower1.jpg']
+        var i = 0;
+        function demo()
+        {
+            var im = document.querySelector("img")
+            im.src="images/"+arr[i]
+            i++
+            if(i==arr.length)
+            {
+                i=0
+            }
+        }
+        window.setInterval(demo,1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" onchange="demo(this)">
+    <p></p>
+    <script>
+        function demo(a)
+        {
+          /* var x = document.querySelector("input").value;
+           document.querySelector("p").innerHTML=x;
+            alert("OK") */
+
+            // or
+
+            var x = a.value;
+            document.querySelector("p").innerHTML=x;
+            alert(x)
+
+        }
+    </script>
+</body>
+</html>

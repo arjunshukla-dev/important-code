@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #main{
+            box-shadow: 0px 0px 10px  #fff;
+            padding: 40px;
+            background: #fff;
+            border-radius: 10px;
+            min-height: 300px;
+        }
+        button{
+            margin: 0px 10px;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 8px 20px;
+            background: #fa0303;
+            color: #fff;
+            border:none;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body style="background: #414141;">
+    <div id="main">
+        <span id="sp1"> Score</span><br>
+        <input type="text" id="t1">
+        <p style="height: 10px;">Generated No :</p>
+        <button onclick="demo(this)">1</button>
+        <button onclick="demo(this)">2</button>
+        <button onclick="demo(this)">3</button><br><br>
+        <button onclick="demo(this)">4</button>
+        <button onclick="demo(this)">5</button>
+        <button onclick="demo(this)">6</button>
+
+    </div>
+    <script>
+       
+        //alert(rnum)
+        var t=0;
+        var w=0;
+        function demo(x)
+        {
+            t++;
+            var input1 = document.querySelector('#t1');
+           
+            var rnum = Math.floor(Math.random()*6)+1;
+            var p = document.querySelector('p').innerHTML="Generated No :" +rnum;
+            
+            
+            var sp = document.querySelector('#sp1');
+            
+            if(x.innerHTML==rnum)
+            {
+                input1.value='You are win'
+                input1.style.color='green'
+                w++;
+            }
+            else{
+                input1.value="You are Loose"
+                input1.style.color='red'
+            }
+
+            sp.innerHTML="Score : "+w+"/"+t;
+            //alert(x.innerText)
+        }
+    </script>
+</body>
+</html>

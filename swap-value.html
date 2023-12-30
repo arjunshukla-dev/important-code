@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="">
+    <input type="text" value="Ram" id="t1"><br><br>
+    <input type="text" value="Shayam" id="t2">
+    <script>
+        
+        
+
+        setInterval(function(){
+            var t1 = document.querySelector("#t1");
+            var t2 = document.querySelector("#t2");
+            // value get
+            var v1=t1.value;
+            var v2=t2.value;
+
+            // value set
+            t1.value=v2;
+            t2.value=v1;
+
+        }, 2000);
+    </script>
+</body>
+</html>

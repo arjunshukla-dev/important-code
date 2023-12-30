@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test3</title>
+    <style>
+        body {
+            background: #5372f0;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 620px;
+        }
+
+        .box {
+            width: 300px;
+            min-height: 300px;
+            background: #fff;
+            padding: 0px 20px;
+            border-radius: 5px;
+            padding-bottom: 30px;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+        }
+
+        #login-btn {
+            background: #5372f0;
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+        }
+
+        .register {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="login" id="login">
+                <h1 style="text-align: center;">Welcome back</h1>
+                <span
+                    style="display: inline-block;padding-bottom:10px; text-align: center; width: 100%; color: #212121; font-weight: 600;">Log
+                    in to access your account</span><br>
+                <input type="email" placeholder="Enter Email" id="lemail"><br><br>
+                <input type="password" placeholder="Enter your password" id="lpassword"><br><br>
+                <input type="submit" value="Login" id="login-btn" 
+                onclick="vld()"><br><br>
+                <div style="text-align: center;"><span>Not a member ?</span><a href="#" onclick="demo()">Signup Here</a>
+                </div>
+            </div>
+
+            <div class="register" id="signup">
+                <h1 style="text-align: center;">Join us today!</h1>
+                <span
+                    style="display: inline-block;padding-bottom:10px; text-align: center; width: 100%; color: #212121; font-weight: 600;">Sign
+                    up to become a member</span><br>
+                <input type="text" placeholder="Enter Name" id="t1"><br><br>
+                <input type="email" placeholder="Enter Email" id="t2"><br><br>
+                <input type="password" placeholder="Enter your password" id="t3"><br><br>
+                <input type="submit" value="Signup" id="login-btn" onclick="formControl()"><br><br>
+                <div style="text-align: center;"><span>Not a member ?</span><a href="#" onclick="demo1()">Login Here</a>
+                </div>
+                <p id="res"></p>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var reg = document.querySelector("#signup");
+        var login = document.querySelector("#login");
+
+
+        function demo() {
+            reg.style.display = "block";
+            login.style.display = "none"
+        }
+        function demo1() {
+            login.style.display = "block";
+            reg.style.display = "none"
+        }
+
+        function formControl() {
+            var input1 = document.querySelector("#t1").value;
+              input2 = document.querySelector("#t2").value;
+              input3 = document.querySelector("#t3").value;
+
+            var p = document.querySelector("#res").innerHTML = `
+            <div>
+            <b>Name :<b> ${input1} <br>
+            <b>Email :<b> ${input2} <br>
+            <b>Password :<b> ${input3} <br>
+            </div>
+             `
+        }
+        function vld()
+        {
+            var lemail = document.querySelector("#lemail").value;
+            var lpassword = document.querySelector("#lpassword").value;
+
+            if(lemail==input2 && lpassword == input3)
+            {
+                alert("Login Successfully !");
+            }
+            else{
+                alert("Invalid userid and password ");
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 1200px;
+            margin: 50px auto;
+            border: 20px groove yellow;
+            text-align: center;
+            line-height: 500px;
+            font-size: 80px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <div>
+        TECHPILE
+    </div>
+    <script>
+        var demo=()=>
+        {
+            var str='ABCDEF0124567893abcdef'
+        
+            
+            //alert("Random index : "+rindex+" <br/> Random char :"+rchar)
+
+            var c="#";
+            var c1="#";
+            var c2="#";
+
+            for(var i=1; i<=6;i++)
+            {
+                var rindex = Math.floor(Math.random()*str.length);
+                var rchar = str[rindex];
+
+                var rindex1 = Math.floor(Math.random()*str.length);
+                var rchar1 = str[rindex1];
+
+                var rindex2 = Math.floor(Math.random()*str.length);
+                var rchar2 = str[rindex2];
+                c+=rchar;
+                c1+=rchar1;
+                c2+=rchar2;
+                //alert(c)
+            }
+            console.log(c)
+            console.log(c1)
+            console.log(c2)
+
+            var dv = document.querySelector('div');
+            dv.style.background=c;
+            dv.style.color=c1;
+            dv.style.border="10px groove"+c2;
+            dv.style.transition=".3s"
+
+        }
+        setInterval(demo,1000)
+    </script>
+</body>
+</html>

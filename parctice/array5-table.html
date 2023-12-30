@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tbl
+        {
+            border-collapse: collapse;
+        }
+        .tbl th,
+        .tbl td{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button onclick="demo()">clickMe</button>
+
+    <script>
+        var dv = document.querySelector("div")
+
+        var th = ['Name','Course','City','Gender']
+        var uname = ['Ram','Shyam','Rohan','Suresh']
+        var course = ['B.Tech','Polytechnic','BCA','M.Tech']
+        var city = ['Lucknow','Kanpur','Unnao','Agra']
+        var gender = ['Male','Male','Male','Male']
+        function demo(){
+        var table = "<table class='tbl'>";
+            table += "<tr>"
+            for(var a of th)
+            {
+                table += "<th>" +a+ "</th>";
+            }
+            table +="</tr>"
+
+            for( var i=0; i<uname.length; i++)
+            {
+                table += "<tr>"
+                    table +="<td>" +uname[i]+ "</td>";
+                    table += "<td>" +course[i]+ "</tb>"; 
+                    table += "<td>" +city[i]+ "</td>";
+                    table += "<td>" +gender[i]+ "</td>";
+                table +="</tr>"
+            }
+            table +="</table>"
+            dv.innerHTML=table;
+        }
+            
+    </script>
+</body>
+</html>

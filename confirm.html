@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="demo()">TECHPILE TECHNOLOGY PVT LTD.</h1>
+    <script>
+        
+        function demo()
+        {
+            var y =document.querySelector("h1")
+            var x = confirm("Are yu sure want set style on this paragraph ?")
+             if(x==true)
+             {
+                y.style.color="aqua"
+                y.style.background="red"
+                y.style.borderRadius="10px"
+                y.style.boxShadow="0px 0px 10px 10px aqua"
+             }
+        }
+    </script>
+</body>
+</html>

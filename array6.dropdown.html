@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <button onclick="demo()">Click ME</button>
+    <script>
+        function demo()
+        {
+            var p = document.querySelector("p")
+            var arr =['HTML','CSS','JS','JQUERY','REACT JS','VUE JS']
+            var r = "<select>"
+            for(var a of arr)
+            {
+                // p.innerHTML=a
+                r=r+"<option>"+a+"</option>";
+                //alert(r)
+            }
+            r=r+"</select>"
+            p.innerHTML=r;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../../pictures/forest1.jpg" id="im1" alt="" width="350px" height="250px" onclick="demo()"><br><br>
+    <img src="" alt="img" id="im2" width="350px" height="200px">
+    <img src="" alt="img" id="im3" width="350px" height="200px">
+    <img src="" alt="img" id="im4" width="350px" height="200px">
+    <script>
+        function demo() {
+            var x = document.querySelector("#im1")
+            var y = document.querySelector("#im2")
+            var i = document.querySelector("#im3")
+            var j = document.querySelector("#im4")
+
+            var a = x.src;
+
+            y.src = a;
+            i.src=a;
+            j.src = a;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        var arr = []
+         
+        for(var i=0; i<=5; i++)
+        {
+            var data = prompt("Enter items for array")
+            arr[i]=data;
+        }
+        var dv = document.querySelector("div")
+        var result = ""
+        for(var a of arr)
+        {
+            result=result+ " " +a;
+        }
+        dv.innerHTML=result;
+    </script>
+</body>
+</html>

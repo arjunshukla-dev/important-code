@@ -1,0 +1,27 @@
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" value="Rahul" id="txt1"/><br><br>
+    <input type="text" value="Suresh" id="txt2"/>
+
+    <!-- <button onclick="swap()">Click</button> -->
+
+    <script>
+        setInterval(function(){
+            var t1 = document.querySelector("#txt1")
+            var t2 = document.querySelector("#txt2")
+
+            // get value from form-control
+            var a = t1.value;
+            var b = t2.value;
+
+            // set value and swaping
+            t1.value = b;
+            t2.value = a;
+        },1000)
+    </script>
+</body>
+
+</html>

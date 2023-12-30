@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 400px;
+            width: 500px;
+            
+            padding: 30px 0px 0px 30px;
+        }
+        #inner{
+            width: 70%;
+            height: 60px;
+            background-color: #fff;
+            text-align: center;
+        }
+        button{
+        padding: 10px 30px ;
+        margin: 10px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+        <button onclick="demo()">Set Color</button>
+    </div>
+    <script>
+
+        function demo()
+        {
+            var body = document.querySelector('body');
+            body.style.backgroundColor=color;
+        }
+        
+        setInterval(()=>{
+            
+            var dv2 = document.querySelector('#inner');
+            var str = 'ABCDEF012345abcdef6789';
+            
+             color = "#";
+            for(var i=1;i<=6;i++)
+            {
+                var rindex = Math.floor(Math.random()*str.length)
+                 var rchar = str[rindex];
+                color+=rchar;
+
+            }
+            //alert(color)
+            dv2.innerText=color;
+            dv2.style.backgroundColor=color;
+            
+        },1000)
+    </script>
+</body>
+</html>

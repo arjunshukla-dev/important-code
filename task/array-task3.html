@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="state"></p>
+    <p id="city"></p>
+    
+
+    <script>
+    
+            var state = ['UP','MP','DELHI']
+            var upCity = ['Kanpur','Lucknow','Noida'] 
+            var mpCity = ['A','B','C']
+            var delCity = ['RajivChauk','Anandvihar','Ashokvihar']
+
+            var res = "<select onchange='demo1(this)'><option>--select State--</option>"
+            state.forEach(function(data,i){
+                res+="<option>"+data+"</option>"
+            })
+            res+="</select>"
+            document.querySelector("#state").innerHTML = res;
+        
+            function demo1(obj)
+            {
+                //alert(obj.value)
+                var res ="<select>"
+                    if(obj.value == "UP")
+                    {
+                        upCity.forEach((data)=>{
+                            res+="<option>"+data+"</option>"
+                        })
+                    }
+                    else if(obj.value == "MP")
+                    {
+                        mpCity.forEach((data)=>{
+                            res+="<option>"+data+"</option>"
+                        })
+                    }
+                    else if(obj.value =="DELHI")
+                    {
+                        delCity.forEach((data)=>{
+                            res+="<option>"+data+"</option>"
+                        })
+                    }
+                    else
+                    {
+                        var city = document.querySelector("#city");
+                        city.style.display="none";
+                    }
+                    res+="</select>"
+                    document.querySelector("#city").innerHTML=res;
+            }
+    </script>
+</body>
+</html>

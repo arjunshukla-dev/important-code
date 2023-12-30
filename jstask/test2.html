@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test2</title>
+    <style>
+        body{
+            background-color: #5372f0;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            min-height: 350px;
+            width: 250px;
+            background: #fff;
+            padding: 0px 30px;
+            padding-bottom: 20px;
+        }
+        input{
+            width: 100%;
+            height: 45px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        #btn{
+            background: #5372f0;
+            color: #fff;
+            border: none;
+            font-size: 17px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h1 style="text-align: center;">Login Form</h1>
+            <input type="email" placeholder="Email Address" id="t1"><br><br>
+            <span id="p1"></span><br>
+            <input type="password" placeholder="Password" id="t2"><br><br>
+            <span id="p2"></span><br>
+            <a href="#">Forgot password</a><br><br>
+            <input type="submit" id="btn" value="Login" onclick="demo()">
+            <br><br>
+            <span>Not yet menber?</span><a href="#">Singup now</a>
+        </div>
+    </div>
+    <script>
+        var txt1 = document.querySelector("#t1")
+        var txt2 = document.querySelector("#t2")
+        function demo()
+        {
+            if(txt1.value == "")
+            {
+                p1.innerText="Email can't be blank"
+                p1.style.color="red"
+                txt1.style.border="1px solid red"
+                
+            }
+            else if(txt2.value == "")
+            {
+                p2.innerText="Password can't be blank"
+                p2.style.color="red"
+                txt2.style.border="1px solid red"
+            }
+        }
+    </script>
+</body>
+</html>

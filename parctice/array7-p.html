@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .para{
+            width: 800px;
+            height: 200px;
+            background-color: #000;
+            color: #fff;
+            font-size:20px;
+            font-weight:600;
+        }
+    </style>
+</head>
+<body>
+    <p class="para"></p>
+    <script>
+        var arr1 = ['Mohan','Jay','Aman','Rahul','Suresh'];
+        var p = document.querySelector("p");
+        var res =""
+        for(var elem of arr1)
+        {
+            res+= " "+elem;
+            p.innerHTML= res;
+            
+        }
+        
+    </script>
+</body>
+</html>

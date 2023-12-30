@@ -1,0 +1,35 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1 id="t1">Rahul</h1>
+    <h1 id="t2">Saurab</h1>
+    <h1 id="t3">Rakoo</h1>
+    <h1 id="t4">Jay</h1>
+    <h1 id="t5">Mohit</h1>
+
+    <script>
+        setInterval(function () {
+            var p1 = document.querySelector("#t1")
+            var p2 = document.querySelector("#t2")
+            var p3 = document.querySelector("#t3")
+            var p4 = document.querySelector("#t4")
+            var p5 = document.querySelector("#t5")
+
+            var a = p1.innerText;
+            var b = p2.innerText;
+            var c = p3.innerText;
+            var d = p4.innerText;
+            var e = p5.innerText;
+
+           p1.innerText=b;
+           p2.innerText=c;
+           p3.innerText=d;
+           p4.innerText=e;
+           p5.innerText=a;
+        }, 1000)
+    </script>
+</body>
+
+</html>

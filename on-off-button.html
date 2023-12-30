@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 60px;
+            width: 60px;
+            background:#000;
+            font-size:20px;
+            font-weight:600;
+            color: #fff;
+            border:none;
+            border-radius:50%;
+        }
+        img{
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/off-bulb.jpg" alt="">
+    <!-- <img src="images/on-bulb.avif" alt=""> -->
+    <button onclick="demo()">ON</button>
+    <script>
+      function demo(){
+
+        var btn = document.querySelector("button");
+        var im = document.querySelector("img");
+        if(btn.innerText=="ON")
+        {
+            btn.innerText="OFF"
+            im.setAttribute("src","images/on.png")
+            btn.style.background="red"
+
+        }
+        else{
+            btn.innerText="ON"
+            im.setAttribute("src","images/off-bulb.jpg")
+            btn.style.background="green"
+        }
+      }
+    </script>    
+</body>
+</html>

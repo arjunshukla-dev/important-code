@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="select">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>PYTHON</option>
+        <option>JAVA</option>
+    </select>
+    <input type="text" id="res"><br><br>
+     <span id="s"></span><br><br> 
+    <button onclick="demo()">Click Me</button>
+    <script>
+        function demo()
+        {
+            var txt = document.getElementById("select")
+            var sp = document.getElementById("s")
+            var result = document.getElementById("res")
+
+            var txt2 = txt.value;
+             sp.innerText=txt2;
+             sp.style.color="brown"
+
+            result.value=txt2;
+            
+        }
+    </script>
+</body>
+</html>

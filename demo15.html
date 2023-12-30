@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="number"/>
+        <span></span><br><br>
+        <button onclick="checkValidate()">Check</button>
+        <script>
+            function checkValidate()
+            {
+                var t =document.querySelector("input")
+                var sp =document.querySelector("span")
+
+                //alert(t.value)
+                var len = t.value.length;
+                if(len!=6){
+                    sp.innerHTML="Invalid PinCode"
+                    t.style.border="2px solid red"
+                    sp.style.color="red"
+                }
+                else{
+
+                    sp.innerHTML="Valid PinCode"
+                    t.style.border="2px solid green"
+                    sp.style.color="green"
+                }
+
+            }
+        </script>
+    </body>
+
+</html>

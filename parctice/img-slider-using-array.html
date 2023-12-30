@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 600px;
+            background: #dedede;
+        }
+        img{
+            width: 600px;
+            height: 380px;
+            padding: 20px;
+            border: 10px groove orangered;
+            box-shadow: 0px 0px 20px orangered inset;
+        }
+    </style>
+</head>
+<body onload="imgChanger()">
+    <div class="main">
+        <div class="box">
+            <img src="../images/img1.jpg" alt="" >
+        </div>
+    </div>
+    <script>
+        var imgArr = ['tree1.jpg','img2.jpg','img7.jpg','flower2.jpg','flower1.jpg']
+        var i = 0;
+        
+        function imgChanger()
+        {
+            var im = document.querySelector('img')
+            im.src="../images/"+imgArr[i];
+            i++;
+            if(i==imgArr.length)
+            {
+                i=0;
+            }
+            //window.setTimeout(imgChanger,2000)
+        }
+        window.setInterval(imgChanger,1000)
+       // window.setTimeout(imgChanger,2000)
+        
+    </script>
+</body>
+</html>

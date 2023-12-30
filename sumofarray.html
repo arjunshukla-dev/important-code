@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var sum = (...b) =>
+        {
+            // b=[20,30]
+            s=0
+            for(var items of b)
+            {
+                s=s+items;
+            }
+            document.write(`<b>Sum is :</b> ${s} <br>`)
+        }
+
+            x=parseInt(prompt("Enter first no : "));
+            y=parseInt(prompt("Enter second no : "));
+
+       // sum(20,30)
+       // sum(20,30,40)
+       sum(x,y)
+    </script>
+</body>
+</html>

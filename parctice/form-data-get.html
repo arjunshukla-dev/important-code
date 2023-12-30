@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form action="" id="form">
+            Name <input type="text" id="name"/><br /><br>
+            Email <input type="email" id="email" /><br><br>
+            password <input type="password" id="password" /><br><br>
+            Mobile NO <input type="number" id="mobile" /><br><br>
+            Message<textarea cols="20" rows="2" id="message"></textarea>
+        </form>
+        <button onclick="getFormData()">Get Data</button>
+        <p></p>
+        
+    </div>
+    <script>
+        var getFormData = () => {
+            var uname = document.querySelector("#name").value;
+            var email = document.querySelector("#email").value;
+            var pass = document.querySelector("#password").value;
+            var mob = document.querySelector("#mobile").value;
+            var msg = document.querySelector("#message").value;
+
+            var p = document.querySelector("p").innerHTML = `
+
+        <div id="form_data">
+            <b>Name is : </b> ${uname} <br/>
+            <b>Eamil is : </b> ${email} <br/>
+            <b>Password is : </b> ${pass} <br/>
+            <b>Mobile is : </b> ${mob} <br/>
+            <b>Message is : </b> ${msg} <br/>
+            </div>
+        <button onclick='printData()'>print Data</button>
+        `;
+        }
+
+        function printData() {
+            var backup = document.body.innerHTML;
+            var storeData = document.querySelector("#form_data").innerHTML;
+            document.body.innerHTML=storeData;
+            window.print();
+            //document.body.innerHTML=backup;
+            window.location.reload();
+            
+       }
+
+
+    </script>
+</body>
+
+</html>

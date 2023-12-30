@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        var arr = [];
+        for( var i=0; i<=4; i++)
+        {
+            var data = prompt("Enter your data in insert in Array ")
+            arr[i]=data;
+            //console.log(arr[i]=data)
+        }
+        var ddl = document.querySelector("p")
+        var r ="<select>"
+            for(var a of arr)
+            {
+                r+="<option>"+a+"</option>"
+            }
+            r+="</select>"
+            ddl.innerHTML=r;
+    </script>
+</body>
+</html>

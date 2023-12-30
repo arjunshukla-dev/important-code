@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        Username<br>
+        <input type="text" id="txt1"><br><br>
+        <span id="span1"></span><br><br>
+        Password<br>
+        <input type="password" id="pass"><br><br>
+        <span id="span2"></span> <br><br>
+        <button onclick="demo()">getvalue</button>
+
+        <script>
+            function demo()
+            {
+                var x = document.getElementById("txt1");
+                var y = document.getElementById("pass");
+                var m1 = document.getElementById("span1");
+                var m2 = document.getElementById("span2");
+                m1.innerText= x.value;
+                m2.innerText= y.value;
+                
+                
+
+            }
+        </script>
+    </body>
+</html>

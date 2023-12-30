@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../bootstrap-code/css/bootstrap.min.css">
+    <style>
+        #loginForm,
+        #fpForm {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 mx-auto p-3 bg-info" id="col-1">
+                <a href="#" class="btn btn-dark" onclick="demo2()">Register</a>
+                <a href="#" class="btn btn-dark float-end" onclick="demo1()">Login</a>
+                <p id="regForm" >
+                    Name<input type="text" class="form-control" />
+                    Email<input type="text" class="form-control" />
+                    Password<input type="text" class="form-control" />
+                    Mobile<input type="text" class="form-control" />
+                </p>
+                <p id="loginForm" >
+                    
+                    Username<input type="text" class="form-control" />
+                    Password<input type="text" class="form-control" />
+                    <input type="submit" value="Login" class="btn btn-dark mt-2">
+                    <a href="#" onclick="demo3()">Forgot Password</a>
+                
+                </p>
+                <p id="fpForm">
+                    
+                    <input type="text" class="form-control mt-3" />
+                    <input type="submit" value="Send OTP" class="btn btn-dark mt-2"/>
+                
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var rform = document.querySelector("#regForm")
+        var lform = document.querySelector("#loginForm")
+        var fpform = document.querySelector("#fpForm")
+        
+        //lform.style.display="none"
+        //fpform.style.display="none"
+        function demo1() {
+            lform.style.display="block"
+
+            rform.style.display="none"
+            fpform.style.display="none"
+        }
+        function demo2() {
+            lform.style.display="none"
+            rform.style.display="block"
+            fpform.style.display="none"
+        }
+        function demo3() {
+            lform.style.display="none"
+            rform.style.display="none"
+            fpform.style.display="block"
+        }
+    </script>
+</body>
+
+</html>

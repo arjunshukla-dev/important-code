@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form_validate</title>
+    <style>
+        body{
+            background: #212121;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Lato',sans-serif;
+        }
+        .main{
+            width: 600px;
+            height: 500px;
+            background: #eee;
+            color: black;
+            margin-top: 50px;
+            border-radius: 5px;
+        }
+        
+        #form{
+            display: flex;
+            justify-content: space-evenly;
+           
+        }
+        ::placeholder{
+            color: #212121;
+            font-size: 14px;
+            font-family:'Lato',sans-serif;
+        }
+        label{
+            display: inline-block;
+            margin-top: 15px;
+            font-size:18px;
+            font-weight:600;
+        }
+        .a{
+            width:100%;
+            height:40px;
+            border: 2px solid aqua;
+            border-radius: 5px;
+            padding-left: 10px;
+            background: #fff;
+        }
+        input[type=file]{
+            outline: none;
+        }
+        .btn{
+            width: 88%;
+            height: 40px;
+            background: aqua;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            border: none;
+            margin-left: 5%;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1 style="text-align: center;">Form Validation</h1>
+        <div class="form-content">
+            <form action="" id="form">
+                <div class="form-box1">
+                    <label for="">Name</label><br>
+                    <input type="text" placeholder="Enter your full name" class="a" id="name"><br>
+                    <label for="">Email Address</label><br>
+                    <input type="email" placeholder="Enter your valid email" class="a" id="email"><br>
+                    <label for="">Password</label><br>
+                    <input type="password" placeholder="Enter password" class="a" id="password"><br>
+                    <label for="">Gender</label><br>
+                    <input type="radio">Male
+                    <input type="radio">Female<br>
+                    <label for="">Select Document</label><br>
+                    Aadhar <input type="checkbox">
+                    Pan Card <input type="checkbox">
+                    Others <input type="checkbox">
+
+                </div>
+                <div class="form-box2">
+                    <label>Age</label><br>
+                    <input type="number" placeholder="Enter your Age" class="a" id="age"><br>
+                    <label>Phone Number</label><br>
+                    <input type="number" class="a" id="phone" placeholder="Enter 10 digits valid mobile number"><br>
+                    <label>Qualification</label><br>
+                    <select class="a">
+                        <option>B.Tech</option>
+                        <option>BCA</option>
+                        <option>B.sc</option>
+                        <option>Diploma(C.S)</option>
+                    </select><br>
+                    <label>Upload Document</label><br>
+                    <input type="file" class="a" id="file">
+                </div>
+            </form>
+            <button class="btn" onclick="validate()">Submit</button>
+        </div>
+    </div>
+    <script>
+        var validate =()=>
+        {
+            console.log("check...................")
+        }
+    </script>
+</body>
+</html>

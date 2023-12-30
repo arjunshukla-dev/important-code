@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+    <script>
+      // function colorChanger()
+      // {
+
+        var str = "0A1B2C3D4E5F6a7b8c9def";
+        
+        var color = "#"
+         for(var i=0; i<=5;i++)
+         {
+             var r= Math.floor(Math.random()*str.length)
+             color+=str.charAt(r)
+            // alert(color)
+             //alert(str.charAt(r))
+         }
+         var body = document.querySelector('body');
+         body.style.backgroundColor=color;
+         body.innerHTML=color;
+         //alert(color)
+      // }
+      // setInterval(colorChanger,1000)
+      var button = document.createElement('button');
+      var txt = document.createTextNode('Copy-Color');
+      button.appendChild(txt);
+      body.appendChild(button);
+      button.addEventListener('click',(e)=>{
+        //console.log(e.target=color)
+        
+        // document.execCommand('copy');
+        // console.log(body.innerText)
+        navigator.clipboard.writeText(color)
+       // button.innerHTML="coppid"
+       button.style.border='5px solid blue'
+       
+       
+      });
+    
+      
+      
+      
+        
+    </script>
+</body>
+</html>

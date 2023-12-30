@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = ['C','C++','JAVA','PYTHON','C#','PHP']
+        console.log(x.length)
+        
+        // for(var i=0; i<x.length;i++)
+        // {
+        //     document.write(`${x[i]} present at ${i} <br/>`)
+        // }
+
+        /*var i = 0;
+        for(var a of x)
+        {
+            document.write(` ${a} present at ${i} <br/>`)
+            i++;
+        } */
+
+
+        for(var b in x)
+        {
+            document.write(`${x[b]} present at : ${b} <br/>`)
+        }
+    </script>
+</body>
+</html>

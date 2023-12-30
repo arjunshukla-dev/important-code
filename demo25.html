@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select  id="select" onchange="demo()">
+        <option>Select language</option>
+        <option>PHP</option>
+        <option >.NET</option>
+        <option >Python</option>
+    </select>
+    <span id="m1"></span>
+    <script>
+        function demo()
+        {
+            var t1 = document.querySelector("#select");
+            var msg = document.querySelector("#m1")
+            msg.innerHTML="<b>Selected value :</b>"+t1.value;
+
+        }
+    </script>
+</body>
+</html>

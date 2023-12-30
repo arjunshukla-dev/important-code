@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span></span>
+    <p id="para" ></p>
+    <script>
+            var arr = ['Ram', 'Mohan', 'Shyam', 'jay'];
+            var res = "<select onchange='demo(this)'> <option>--select--</option>"
+
+            arr.forEach((data) => {
+                res += "<option>" + data + "</option>";
+                
+            })
+            res += "</select>"
+            document.querySelector("span").innerHTML=res;
+        
+        function demo(ddl){
+            para.innerHTML=ddl.value;
+        }
+    
+
+    </script>
+</body>
+
+</html>

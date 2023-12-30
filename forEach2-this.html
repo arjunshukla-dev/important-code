@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" value="ddl"name="a"  onclick="changer(this)">DropDown
+    <input type="radio" value="ul" name="a" onclick="changer(this)">UL
+    <input type="radio" value="ol" name="a" onclick="changer(this)">OL
+    <p id="para"></p>
+
+    <script>
+        function changer(element)
+        {
+            var arr = ['HTML','CSS','JAVASCRIPT','PHP','PYTHON']
+           
+            var refe = element.value;
+                if(refe=="ddl")
+                {
+                    var res="<select>"
+                    arr.forEach((data)=>{
+                        res+= "<option>" +data+ "</option>";
+                    });
+                   
+                }    
+                if(refe=="ul")
+                {
+                    var res = "<ul>"
+                        arr.forEach((data)=>{
+                            res+="<li>"+data+"</li>";
+                        });
+                }
+                if(refe == "ol")
+                {
+                    res="<ol>"
+                        arr.forEach((data)=> {
+                            res+="<li>"+data+"</li>"
+                        })
+                }
+
+
+                res+="</select>";
+               para.innerHTML=res;
+        }
+    </script>
+</body>
+</html>

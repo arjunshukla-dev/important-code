@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            height: 50px;
+            width: 50px;
+            background: black;
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/off.png" alt=""><br><br>
+    <input type="button" value="ON" onclick="demo()">
+    <input type="button" value="Start" onclick="start()">
+    <input type="button" value="Stop" onclick="stop()">
+    <script>
+        function demo()
+        {
+            var im = document.querySelector("img")
+            var btn = document.querySelector("input")
+            if(btn.value=="ON")
+            {
+                btn.value="OFF"
+                btn.style.background="red"
+                im.setAttribute("src","images/on.png")
+            }
+            else{
+                btn.value="ON"
+                btn.style.background="green"
+                im.setAttribute("src","images/off.png")
+            }
+        }
+
+        var i=0;
+        function start()
+        {
+            if(i==0)
+            {
+                x=window.setInterval(demo,1000)
+            }
+            i++;
+        }
+        function stop()
+        {
+            window.clearInterval(x)
+            i=0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="../../bootstrap-code/css/bootstrap.min.css">
+    <style>
+        .box {
+            width: 40%;
+            min-height: 250px;
+            background-color: #dedede;
+            border-radius: 10px;
+            padding: 3%;
+        }
+
+        .container-fluid {
+            height: 100vh;
+        }
+        #reg-form{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-primary">
+        <div class="box mx-auto" id="reg-form">
+
+            <label for="" class="form-label">Name</label>
+            <input type="text" class="form-control" placeholder=" Enter your name" id="fname">
+            <label for="" class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder=" Enter your Email" id="femail">
+            <label for="" class="form-label">Mobile</label>
+            <input type="text" class="form-control" placeholder=" Enter your Mobile" id="fmobile">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder=" Enter your password" id="fpass">
+
+            <button class="btn btn-primary form-control mt-3" onclick="formData()">Submit</button>
+            <p style="text-align: center; padding-top: 10px;"><span>Not a member ?</span> <a href="#" onclick="login()">Login Here</a></p>
+            <p id="form-res"></p>
+        </div>
+
+        <div class="mx-auto  box" id="login-form">
+            <label for="" class="form-label">Email</label>
+            <input type="text" class="form-control" placeholder=" Enter your Email" id="lemail">
+            <label for="" class="form-label">Password</label>
+            <input type="password" class="form-control" placeholder=" Enter your password" id="lpass">
+            <button class="btn btn-primary form-control mt-3" onclick="vld()">Login</button>
+            <p style="text-align: center; padding-top: 10px;"><span>Not a member ?</span> <a href="#" onclick="register()">Signup Here</a></p>
+        </div>
+    </div>
+    <script>
+        const rform = document.querySelector("#reg-form");
+        const lform = document.querySelector("#login-form");
+        
+        function register()
+        {
+            rform.style.display="block";
+            lform.style.display="none";
+        }
+
+        function login()
+        {
+            lform.style.display="block";
+            rform.style.display="none";
+        }
+
+        function formData()
+        {
+            var fname = document.querySelector("#fname").value;
+             femail = document.querySelector("#femail").value;
+            var fmobile = document.querySelector("#fmobile").value;
+             fpass = document.querySelector("#fpass").value;
+
+            var p = document.querySelector("#form-res").innerHTML=`
+            Name : ${fname} <br> Email : ${femail} <br>
+            Mobile No : ${fmobile} <br> Password : ${fpass}
+            `
+        }
+
+        function vld()
+        {
+            var lemail = document.querySelector("#lemail").value;
+            var lpass = document.querySelector("#lpass").value;
+
+            if(lemail === femail && lpass === fpass)
+            {
+                alert('Login Successfully');
+            }
+            else
+            {
+                alert('Email or Password Invalid')
+            }
+        }
+    </script>
+</body>
+
+</html>

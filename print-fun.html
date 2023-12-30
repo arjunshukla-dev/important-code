@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <img src="images/img3.jpg" alt="">
+    <br>
+    <h1>Welcome to JavaScript</h1>
+    <b>TECHPILE TECHNOLOGY</b>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni voluptatibus nesciunt laborum veniam, earum enim veritatis quasi! Id nulla, quod cum atque numquam, minus suscipit dignissimos, vel voluptates ipsum inventore?</p>
+</div>
+    <button onclick="demo()">Print Data</button>
+    <script>
+        var demo=()=>
+        {
+           // window.print() // document.body
+
+           //var x = document.body.innerText;
+
+           //var x = document.body.innerHTML;
+           //alert(x)
+
+           var b= document.body.innerHTML;
+           var res = document.querySelector("div").innerHTML;
+           document.body.innerHTML=res;
+           window.print()
+           document.body.innerHTML=b;
+        }
+    </script>
+
+</body>
+</html>

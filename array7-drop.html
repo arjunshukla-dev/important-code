@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <button onclick="demo()">clickme</button>
+    <script>
+
+        function demo() {
+            var p1 = document.querySelector("p")
+
+            var arr = ['SUMMER TRAINING', 'WINTER TRAINING', 'APPRENTICISESHIP', 'IT TRAINING']
+            var res = "<ul>";
+            for (var i = 0; i <= arr.length - 1; i++) {
+                res = res + "<li>" + arr[i] + "</li>"
+            }
+            res=res+"</ul>"
+            p1.innerHTML=res;
+        }
+    </script>
+</body>
+
+</html>

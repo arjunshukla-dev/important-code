@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="select">
+        <option>select language</option>
+        <option>html</option>
+        <option>css</option>
+        <option>reactjs</option>
+    </select>
+    <input type="text" id="txt">
+    <span id="m1"></span>
+    
+    
+    <button onclick="demo()">Click Me</button>
+    <script>
+        function demo()
+        {
+        
+            var x = document.getElementById("select")
+            var msg3 = document.getElementById("txt")
+            //alert(x);
+            //  var msg = document.getElementById("m1")
+            //     msg.innerText=x;
+
+            
+                msg3.value=x.value;
+             
+            
+        }
+    </script>
+</body>
+</html>

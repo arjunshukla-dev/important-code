@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="pwd">
+    <input type="text" id="txt">
+    <button onclick="changeAttribute()">ClickMe</button>
+    <script>
+        function changeAttribute(){
+            var t1 = document.querySelector("#pwd")
+            var t2 = document.querySelector("#txt")
+            t2.value=t1.value;
+            
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>capcha</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #main{
+            width: 320px;
+            min-height: 150px;
+            box-shadow: 0px 0px 5px gray;
+            padding: 30px;
+        }
+        span{
+            display: inline-block;
+            margin-left: 5px;
+            border: 1px solid black;
+            padding: 5px 5px;
+            cursor: pointer;
+        }
+        input{
+            padding: 5px;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="text"  id="t1"><span onclick="reload()">refresh</span><br><br>
+        <input type="text" name="" id="t2"><br><br>
+        <b id="msg"></b>
+        <button onclick="vld()">Submit</button>
+    </div>
+    <script>
+        var str = 'ABCDEF012345abc5d78e9f'
+        
+            var cap = ""
+            for(var i=1; i<=6;i++)
+            {
+                var ri = Math.floor(Math.random()*str.length)
+                cap+=str[ri]
+            }
+            var input1 = document.querySelector('#t1');
+            input1.value=cap;
+
+            function reload()
+            {
+                input1.value.cap;
+                location.reload()
+            }
+            var input2 = document.querySelector('#t2');
+            function vld()
+            {
+             var m1 = document.querySelector('#msg');   
+                if(input2.value==input1.value)
+                {
+                    m1.innerHTML="Valid Captcha";
+                    m1.style.color="green";
+                }
+                else{
+                    m1.innerHTML="Invalid Captcha";
+                    m1.style.color="red"
+                }
+            }
+        
+    </script>
+</body>
+</html>

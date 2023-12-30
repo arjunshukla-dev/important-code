@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 350px;
+            height: 300px;
+            margin: 150px 0px 0px 500px;
+        }
+        button{
+            background: black;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 50%;
+            padding:20px;
+            margin: 50px 0px 0px 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../images/off.png" alt=""><br>
+    <button onclick="demo()">ON</button>
+    <button onclick="start()" style="margin: 0px;">Start</button>
+    <button onclick="stop()" style="margin: 0;">Stop</button>
+    <script>
+        var im = document.querySelector("img");
+        var btn = document.querySelector("button");
+        function demo()
+        {
+            
+            if(btn.innerText=="ON")
+            {
+                btn.innerText="OFF";
+                im.src="../images/on.png"
+                btn.style.background="red"
+            }
+            else{
+                btn.innerText="ON"
+                im.src="../images/off.png"
+                btn.style.background="green"
+            }
+        }
+        var i = 0;
+        function start()
+        {
+             if(i==0)
+             {
+                interv = setInterval(demo,1000)
+             }
+             i++;
+            
+        }
+
+        function stop()
+        {
+            clearInterval(interv)
+            i=0;
+        }
+    </script>
+</body>
+</html>

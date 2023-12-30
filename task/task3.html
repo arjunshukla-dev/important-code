@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1</title>
+    <link rel="stylesheet" href="../../bootstrap-code/css/bootstrap.min.css">
+    <style>
+        
+    </style>
+</head>
+<body style="background: #dedede; color: #070606; font-size: 20px;">
+    <h2 class="text-center pt-5">feedback</h2>
+    <div class="container a">
+        
+        <div class="row">
+            <div class="col-sm-6">
+               <label for=""> Enroll No</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="text" class="form-control" id="enrolno">
+                    <span id="m1"></span>
+                </div>
+                <label for="">Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="text" class="form-control" id="uname">
+                    <span id="m2"></span>
+                </div>
+                <label for="">College Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="text" class="form-control" id="college">
+                    <span id="m3"></span>
+                </div>
+                <label for="">Year</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="date" class="form-control" id="year">
+                    <span id="m4"></span>
+                </div>
+                <label for="">Email id</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="email" class="form-control" id="email">
+                    <span id="m5"></span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="">Today Is</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="data" class="form-control" id="today">
+                    <span id="m6"></span>
+                </div>
+                <label for="">Apply For</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="text" class="form-control" id="apply">
+                    <span id="m7"></span>
+                </div>
+                <label for="">Course</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="text" class="form-control" id="course">
+                    <span id="m8"></span>
+                </div>
+                <label for="">Contact No</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="number" class="form-control" id="contact">
+                    <span id="m9"></span>
+                </div>
+                <label for="">Amount</label>
+                <div class="input-group">
+                    <span class="input-group-text"></span>
+                    <input type="number" class="form-control" id="amount">
+                    <span id="m10"></span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-warning mt-3 text-light fs-4" onclick="getValue()">Register Now</button>
+    
+    </div>
+    <script>
+        function getValue()
+        {
+
+        var enrno = document.getElementById('enrolno')
+        var uname = document.getElementById('uname')
+        var collegeName = document.getElementById('college')
+        var year = document.getElementById('year')
+        var email = document.getElementById('email')
+        var today = document.getElementById('today')
+        var apply = document.getElementById('apply')
+        var course = document.getElementById('course')
+        var contact = document.getElementById('contact')
+        var amount = document.getElementById('amount')
+
+        var txt1 = document.getElementById('m1')
+        var txt2 = document.getElementById('m2')
+        var txt3 = document.getElementById('m3')
+        var txt4 = document.getElementById('m4')
+        var txt5 = document.getElementById('m5')
+        var txt6 = document.getElementById('m6')
+        var txt7 = document.getElementById('m7')
+        var txt8 = document.getElementById('m8')
+        var txt9 = document.getElementById('m9')
+        var txt10 = document.getElementById('m10')
+
+        txt1.innerText= enrno.value;
+        txt2.innerText = uname.value;
+        txt3.innerText = collegeName.value;
+        txt4.innerText =year.value;
+        txt5.innerText =email.value;
+        txt6.innerText =today.value;
+        txt7.innerText =apply.value;
+        txt8.innerText =course.value;
+        txt9.innerText =contact.value;
+        txt10.innerText =amount.value;
+
+        txt1.style.color="red"
+        txt2.style.color="green"
+        txt3.style.color="yellow"
+        txt4.style.color="brown"
+        txt5.style.color="blue"
+        txt6.style.color="aqua"
+        txt7.style.color="pink"
+        txt8.style.color="black"
+        txt9.style.color="violet"
+        txt10.style.color="gray"
+        
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        let arr = ['C','HTML','CSS','JAVASCRIPT','REACT JS','PHP','PYTHON','JAVA']
+        let color1 = ['red','black','aqua','orange','blue','teal','yellow','lime']
+        let color2 = ['white','red','black','white','lime','red','brown','maroon']
+
+        let res = "<select> <option>--select technology--</option>";
+            var i = 0;
+            for(var item of arr)
+            {
+            
+                res+="<option style='background:"+color1[i]+"; color:"+color2[i]+"'>"+item+"</option>";
+                i++;
+            }
+            res+="</select>"
+            document.querySelector('div').innerHTML=res;
+        
+    </script>
+</body>
+</html>

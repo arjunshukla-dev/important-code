@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        table{
+            margin-top: 200px;
+            color: #fff;
+            font-size:20px;
+            font-weight:600px;
+            letter-spacing:1px;
+            background: magenta;
+        }
+        table,th,td{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>College</th>
+            <th>City</th>
+        </tr>
+        <tr onclick="demo(this)">
+            <td>Mohan</td>
+            <td>Polytechnic</td>
+            <td>Unnao</td>
+        </tr>
+        <tr onclick="demo(this)">
+            <td>Jaya</td>
+            <td>B.tech</td>
+            <td>Kanpur</td>
+        </tr>
+        <tr onclick="demo(this)">
+            <td>Mahesh</td>
+            <td>IIT</td>
+            <td>Delhi</td>
+        </tr>
+    </table>
+</center>
+
+<script>
+    function demo(re)
+    {
+        re.remove()
+    }
+</script>
+</body>
+</html>

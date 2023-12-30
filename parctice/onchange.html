@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="langList" onchange="changeHandler()">
+        <option value="select">Select Language</option>
+        <option value="JAVA">JAVA</option>
+        <option value="PYTHON">PYTHON</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+    </select>
+    <!-- <div id="result"></div> -->
+    <input type="text" id="txt">
+
+    <script>
+        function changeHandler()
+        {
+            var x = document.querySelector("#langList").value;
+            var y = document.querySelector("#result")
+            var t= document.querySelector("#txt")
+            console.log(x)
+            if(x == "select")
+            {
+                alert("Please Select Language")
+            }
+            else
+            {
+                //y.innerHTML=`<b> Selected Language : ${x}</b> `;
+
+                t.value = x;
+            }
+           
+
+        }
+    </script>
+</body>
+</html>

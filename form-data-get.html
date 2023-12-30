@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Name" id="t1"><br><br>
+    <input type="number" placeholder="MobileNo" id="t2"><br><br>
+    <input type="email" placeholder="Email" id="t3"><br><br>
+    <input type="text" placeholder="message" id="t4"><br><br>
+    <button onclick="demo()">Get Data</button>
+    <p></p>
+    
+    <script>
+        function demo() {
+            var txt1 = document.querySelector("#t1").value;
+            var txt2 = document.querySelector("#t2").value;
+            var txt3 = document.querySelector("#t3").value;
+            var txt4 = document.querySelector("#t4").value;
+
+
+            // var sp = document.querySelector("p")
+
+
+            // sp.innerHTML = txt1;
+            // sp.innerHTML = txt2;
+            // sp.innerHTML = txt3;
+            // sp.innerHTML = txt4;
+
+
+            var p = document.querySelector("p").innerHTML = `
+            <div>
+            <b>Name :<b> ${txt1} <br>
+            <b>Email :<b> ${txt3} <br>
+            <b>Mobile :<b> ${txt2} <br>
+            <b>Massage :<b> ${txt4} <br>
+            </div>
+                <button onclick='demo1()'>Print</button>
+             `
+            
+        }
+        function demo1()
+             {
+                var b = document.body.innerHTML;
+
+                var x = document.querySelector("div").innerHTML;
+                document.body.innerHTML=x;
+                window.print()
+                document.body.innerHTML=b;
+                
+             }
+
+    </script>
+</body>
+
+</html>

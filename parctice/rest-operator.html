@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest operator</title>
+</head>
+<body>
+    <p></p>
+    <span style="background: red;color:#fff;font-size: 25px;display: inline-block
+    ; padding: 12px 20px; font-weight: 600;"></span>
+    
+    <script>
+        
+        
+        const bind =(...arr)=>
+        {
+            const p1 = document.querySelector("p");
+            var res = "<select onchange='setValue(this)'>";
+            for(var a of arr)
+            {
+                res=res+"<option>" +a+ "</option>";
+            }
+            res+=a+"</select>"
+            p1.innerHTML=res;
+          console.log(typeof(res))
+            
+        }
+        bind('C','C++','JAVA','c#','JAVASCRIPT','PYTHON');
+
+        function setValue(d)
+        {
+            //var slt = document.querySelector("select");
+            var sp = document.querySelector("span");
+
+            // sp.innerHTML=slt.value;
+
+            sp.innerHTML=d.value;
+        }
+        
+    </script>
+</body>
+</html>

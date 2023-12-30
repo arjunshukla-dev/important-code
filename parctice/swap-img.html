@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            img{
+                width: 350px;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../../pictures/bird1.jpg" id="im1" alt=""><br><br>
+        <img src="../../pictures/flower2.jpg" alt="" id="im2">
+        <script>
+            setInterval(function(e){
+                
+                var i1 = document.querySelector("#im1")
+                var i2 = document.querySelector("#im2")
+                
+                // get src value
+                var a = i1.src;
+                var b = i2.src;
+
+                // set src value and swaping
+                i1.src = b;
+                i2.src = a;
+            },1000)
+        </script>
+    </body>
+</html>

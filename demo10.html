@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+    <h1 id="h1">Welcome to the world of JS</h1>
+    <p id="msg"></p>
+    <button onclick="demo()">Click Me</button>
+    <script>
+        function demo()
+        {
+            var a = document.getElementById("h1").innerText; // text get karna
+        //    alert("Value is : "+a)
+
+            // var x = document.getElementById("msg").innerText="Hello World";
+
+            var x = document.getElementById("msg").innerText=a; // text set karna
+
+            var x = document.getElementById("msg").innerHTML="<h1>Arjun Shukla</h1>";
+        }
+    </script>
+</body>
+</html>
