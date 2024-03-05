@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 600px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div oncopy="demo(this)", oncut="demo(this)", onpaste="demo(this)",oncontextmenu="demo(this)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim exercitationem dolores veritatis debitis beatae commodi quaerat esse quod ratione quo odio vitae aspernatur cumque, laudantium quidem ducimus, excepturi delectus sint eveniet maiores asperiores veniam fuga, distinctio nostrum. Molestias corporis eos animi adipisci ipsam dolore itaque ea, cupiditate dicta repudiandae ad.</div>
+    <script>
+        function demo(x)
+        {
+            
+            alert("Right click, Cut, Copy, and paste are disabled")
+            event.preventDefault();
+
+    
+        }
+        //  document.querySelector("div").addEventListener("contextmenu",demo);
+        //  document.querySelector("div").addEventListener('copy',demo);
+        //  document.querySelector("div").addEventListener('paste',demo);
+        //  document.querySelector("div").addEventListener('cut',demo);
+    </script>
+</body>
+</html>

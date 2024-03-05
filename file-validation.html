@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" onchange="demo(this)"/>
+    <span>message</span><br>
+    <input type="button" id="btn" value="Save">
+    <script>
+        function demo(x)
+        {
+            var fullpath=x.value;// abc.xy.jpg
+            var ext = fullpath.substring(fullpath.lastIndexOf('.')+1).toLowerCase();
+            var btn = document.querySelector("#btn")
+            var sp = document.querySelector("span")
+            if(ext =="jpg" || ext == "png" || ext == "jpeg")
+            {
+                sp.innerText="Valid image file"
+                sp.style.color="green"
+                btn.removeAttribute("disabled")
+                btn.style.background="green"
+            }
+            else{
+                sp.innerText = "Invalid Image file"
+                sp.style.color="red";
+                btn.setAttribute("disabled","disabled")
+                btn.style.background="red";
+            }
+        }
+    </script>
+</body>
+</html>

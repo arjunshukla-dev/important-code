@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .outer{
+            width: 800px;
+            height:650px;
+        }
+        #inner{
+            width: 400px;
+            height:400px;
+            border-radius:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div id="inner"></div>
+        <select id="slct">
+            <option>--select-color--</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Aqua</option>
+            <option>Blue</option>
+            <option>Cyan</option>
+            <option>Brown</option>
+        </select>
+    </div>
+    <script>
+        // var dv = document.querySelector('#inner');
+        // var slt = document.querySelectorAll('select');
+        // //console.log(slt)
+        // slt.forEach((nodes)=>{
+        //   //  console.log(nodes)
+        //     nodes.addEventListener('change',function(e){
+        //         console.log(this.value)
+        //         var body = document.querySelector("body");
+        //         body.style.background=this.value;
+
+        //     })
+        // })
+
+        var sclt = document.querySelector("select");
+        sclt.addEventListener('change',function(){
+            var body = document.querySelector("body");
+            body.style.background=this.value;
+            document.querySelector("#inner").innerHTML=this.value;
+        })
+    </script>
+</body>
+</html>

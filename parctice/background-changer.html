@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Red</button>
+    <button>Pink</button>
+    <button>Yellow</button>
+    <button>blue</button>
+    <script>
+        var btn = document.querySelectorAll("button");
+        var body = document.querySelector("body");
+        btn.forEach((data)=>{
+            //alert(data.innerText)
+            data.addEventListener('click',(e)=>{
+            //alert(e.target) // object
+            //alert(e.target.innerText) // value
+                body.style.background=e.target.innerText;
+                e.target.style.background=e.target.innerText;
+                e.target.style.color="white";
+            })
+        })
+        
+    </script>
+</body>
+</html>

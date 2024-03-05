@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <script>
+        var data=[
+            {name:"Ram",
+            city:"Lucknow",
+            pic:"images/flower1.jpg"
+            },
+            {name:"Aman",
+            city:"Kanpur",
+            pic:"images/flower2.jpg"
+            },
+            {name:"Ram",
+            city:"Lucknow",
+            pic:"images/img1.jpg"
+            },
+            {name:"Ram",
+            city:"Lucknow",
+            pic:"images/img2.jpg"
+            },
+            {name:"Ram",
+            city:"Lucknow",
+            pic:"images/img3.jpg"
+            },
+            
+        ]
+        var res="<table border='1' cellpadding='10'><th>Name</th><th>City</th><th>Pic</th>"
+            for(var re of data){
+                //alert(re.name)
+                
+                res+="<tr onclick=demo(this)><td>"+re.name+"</td><td>"+re.city+"</td><td><img src='"+re.pic+"' height='50px' width='80px'/></td></tr>"
+            }
+            res+="</table>";
+            document.querySelector("p").innerHTML=res;
+
+            function demo(x){
+                var s = confirm("Are you sure want to hide table : click ok")
+                if(s==true)
+                {
+                    x.style.display="none";
+                }
+                
+            }
+    </script>
+</body>
+</html>

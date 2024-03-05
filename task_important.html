@@ -1,0 +1,19 @@
+<script>
+    var arr = [10.4,50.6,78.4,10.5]
+    // var narr =[10,40,78,10]// sample output
+
+    var narr = arr.map((d,i)=>{
+        return Math.floor(d)
+        
+        console.log(narr)
+    })
+    document.write(narr, "</br>");
+    
+
+    var arr2 = [10.4,50.6,78.4,10.5]
+    var narr2 = []
+    arr2.forEach((data)=>{
+        narr2.push(Math.floor(data))
+    })
+    document.write(narr2)
+</script>

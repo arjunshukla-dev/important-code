@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = "Techpile";
+        var arr = ['html','cSS','jaVa','pYTHON','jAVAscript'];
+        //arr.forEach((data)=>{
+    //         document.write(data +"<br>");
+    //         //first character Upper Case
+    //         alert(data.charAt(0).toUpperCase())
+    //         document.write(data.charAt(0).toUpperCase()+data.slice(1).toLowerCase(), " ")
+
+           
+           
+
+    //    })
+
+        // last character Upper case
+        //document.write(str.charAt(str.lastIndexOf()))
+        console.log(str.substr(0,str.length-1)+str.slice(-1).toUpperCase())
+        arr.forEach((item)=>{
+            document.write(item.substr(0,item.length-1).toLowerCase()+item.slice(-1).toUpperCase(), "<br>")
+        })
+        
+        
+
+    </script>
+</body>
+</html>

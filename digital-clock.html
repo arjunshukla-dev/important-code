@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_clock</title>
+    <style>
+        body{
+            background: black;
+            font-size: 50px;
+            font-weight: 600;
+            color: red;
+            padding-top: 100px;
+            text-align: center;
+        }
+        p{
+            font-size: 60px;
+            font-family: 'Digital-7',serif;
+            background: #fff;
+            border: 10px groove red;
+            border-radius: 5px;
+            width: 600px;
+            margin: 0px auto;
+            box-shadow: 0px 0px 20px 10px black inset;
+        }
+    </style>
+</head>
+<body onload="demo()">
+    <h1>Digital Clock</h1>
+    <p>12:15</p>
+    <script>
+        var p = document.querySelector('p');
+        function demo()
+        {
+            var d = new Date();
+            p.innerHTML=d.toLocaleTimeString();
+            setTimeout(demo,1000)  // recursive method
+        }
+       // setInterval(demo, 1000);
+    </script>
+</body>
+</html>

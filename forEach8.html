@@ -1,0 +1,22 @@
+<script>
+     var arr1 = ['C','HTML','CSS','JAVASCRIPT','BOOTSTRAP','JQUERY','PHP','LARAVEL','MYSQL','SQLSERVER'];
+    var a = "<select>";
+    arr1.forEach((items)=>{
+        a+="<option>"+items+"</option>";
+        //document.write(items,"</br>")
+    })
+    a+="</select>"
+    document.write(a ,"</br>");
+
+
+        var x="<select>"
+    var res = arr1.map((data)=>{
+        
+        return x+="<option>"+data+"<option>";
+    })
+    x+="</select>"
+    document.write(x)
+
+    
+
+</script>

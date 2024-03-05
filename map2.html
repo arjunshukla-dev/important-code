@@ -1,0 +1,19 @@
+<script>
+    
+    var arr=['Html','cSS','jAvA','js','jQueRy']
+    // arr.forEach((data)=>{
+    //     // var x = data.charAt(0).toUpperCase()+data.slice(1).toLowerCase()
+    //     // arr1.push(x);
+    //     // alert(arr1);
+
+    //     vafr 
+    // })
+
+    var arr1 = arr.map((data)=>{
+        return data.charAt(0).toUpperCase()+data.slice(1).toLowerCase();
+    })
+    //document.write(arr1)
+    arr1.forEach((d,i)=>{
+        document.write(`${d} present at : ${i} <br>`)
+    })
+</script>

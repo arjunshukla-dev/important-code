@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #outer {
+            width: 100vw;
+            height: 100vh;
+            background: #313131;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #inner {
+            width: 600px;
+            height: 400px;
+            background-color: #fff;
+            border: 30px groove red;
+            text-align: center;
+            line-height: 280px;
+            font-size: 40px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="inner">Arjun Shukla</div>
+    </div>
+    <script>
+        function demo() {
+            var str = "A0Bf1C3e4DE5d6Fc78a9b"
+
+            var c = ""
+            var c1 = ""
+            var c2 = ""
+            for (var i = 1; i <= 6; i++) {
+                var ri = Math.floor(Math.random() * str.length)
+                var ri1 = Math.floor(Math.random() * str.length)
+                var ri2 = Math.floor(Math.random() * str.length)
+                c += str[ri];
+                c1 += str[ri1];
+                c2 += str[ri2];
+            }
+            // alert(c)
+            var dv = document.querySelector('#inner');
+            dv.style.backgroundColor = c;
+            dv.style.color = c1;
+            dv.style.border = "30px groove" + c2;
+        }
+        setInterval(demo,1000)
+    </script>
+</body>
+
+</html>

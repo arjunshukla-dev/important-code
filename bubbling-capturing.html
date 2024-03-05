@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer{
+            height: 500px;
+            width: 450px;
+            background-color: red;
+        }
+        #inner{
+            height: 300px;
+            width: 250px;
+            background-color: yellow;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="outer">
+        Outer
+        <div id="inner">
+            Inner
+            <button>Click Me</button>
+        </div>
+    </div>
+    <script>
+        document.querySelector('#outer').addEventListener('click',()=>{
+            alert("you clicked on outer Div")
+
+        });
+        document.querySelector('#inner').addEventListener('click',()=>{
+            alert("you clicked on inner Div")
+            
+        });
+        document.querySelector('button').addEventListener('click',()=>{
+            alert("you clicked on Button")
+            
+        })
+    </script>
+</body>
+</html>

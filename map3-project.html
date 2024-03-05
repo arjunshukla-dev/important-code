@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <span></span>
+    <script>
+        var input = document.querySelector("input")
+        input.addEventListener("blur",()=>{
+            var v=this.value;
+            var arr=v.split(" ");
+            var arr1 = arr.map((data)=>{
+                return data[0].toUpperCase()+data.slice().toLowerCase()
+            })
+            var str = arr1.join(" ");
+            document.querySelector("span").innerHTML=str;
+            this.value=str;
+        })
+
+    </script>
+</body>
+</html>

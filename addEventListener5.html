@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <div></div>
+    <script>
+        var arr = ['HTML','CSS','JAVA','PYTHON','PHP'];
+        var drop = "<select>";
+        arr.forEach((data)=>{
+            //alert(data);
+            drop=drop+"<option>"+data+"<option>";
+        })
+        drop+="</select>";
+        var sel = document.querySelector("p");
+        sel.innerHTML=drop;
+        document.querySelector("select").addEventListener('change',function(e){
+            document.querySelector("div").innerHTML=this.value;
+
+        })
+    </script>
+</body>
+</html>

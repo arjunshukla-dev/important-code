@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: auto;
+            margin-top: 200px;
+            background: #eee;
+            min-height: 200px;
+            width: 200px;
+            text-align: center;
+            position: relative;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        span{
+            display: inline-block;
+            cursor: pointer;
+            position: absolute;
+            left: 48%;
+            top: 35%;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div>1234df</div>
+    <span onclick="changeCaptcha()">Refresh</span>
+    <script>
+        function changeCaptcha() {
+            var str = "Aa1Be02bC3f4D5dE96c7F8";
+            var len = str.length;
+            //console.log(len);
+            var ch = '';
+            for (var i = 1; i <= 6; i++) {
+                var rindex = Math.floor(Math.random() * len);
+                //console.log(str[rindex])
+                ch += str[rindex]
+
+            }
+            //   console.log(ch)
+            var x = document.querySelector("div").innerHTML = ch;
+        }
+    </script>
+</body>
+
+</html>

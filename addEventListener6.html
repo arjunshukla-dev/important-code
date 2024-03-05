@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dv"></div>
+    <select name="" id="slt">
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JAVA</option>
+        <option>BOOTSTRAP</option>
+        <option>JAVASCRIPT</option>
+        <option>REACT JS</option>
+        <option>PHP</option>
+        <option>PYTHON</option>
+    </select>
+    <script>
+        
+        // document.querySelector("select").addEventListener('change',function(){
+        //     console.log(this.value)
+        //     document.querySelector("div").innerHTML=this.value;
+        // })
+
+        const selt = document.querySelector('select');
+        selt.addEventListener('change',function(){
+            console.log(this.value)
+            const val = document.querySelector("div");
+            val.innerText=this.value;
+        })
+    </script>
+</body>
+</html>

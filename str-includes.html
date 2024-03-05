@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="email" name="" id="t">
+<input type="button" id="btn" value="Check">
+<span></span>
+    <script>
+        document.querySelector("#btn").addEventListener("click",()=>{
+            //alert("ok");
+            var txt=document.querySelector("#t");
+            var v=txt.value; // ram@gmail.com
+            //alert(v)
+            var sp = document.querySelector("span");
+            if(v.includes("@")==true && v.includes(".")==true){
+                sp.innerHTML="Valid Emailid".fontcolor("green");
+                v.style.border="1px solid green";
+            }
+            else{
+                sp.innerHTML="Invalid Emailid".fontcolor('red');
+                v.style.border="red";
+            }
+
+            
+        })
+    </script>
+</body>
+</html>

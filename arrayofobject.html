@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+
+    <script>
+
+        var studentInfo = [
+        {name : "Rohan",branch:"CSE",city:"Lucknow",mobile:345666},
+        {name : "Ajay",branch:"Me",city:"Noida",mobile:345666},
+        {name : "Manish",branch:"CSE",city:"Haryana",mobile:345666},
+        {name : "Amit",branch:"ME",city:"Kanpur",mobile:345666},
+        {name : "Sobhit",branch:"EC",city:"Lucknow",mobile:345666},
+        {name : "Boss",branch:"IC",city:"Lucknow",mobile:345666},
+        ]
+
+        var res="<table border='1' cellpadding=10>"
+            for(var i in studentInfo){
+
+            res+="<tr><td>"+studentInfo[i].name+"</td><td>"+studentInfo[i].branch+"</td><td>"+studentInfo[i].city+"</td><td>"+studentInfo[i].mobile+"</td></tr>"
+            }
+            res+="</table>"
+            document.querySelector("p").innerHTML=res;
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split-task</title>
+</head>
+
+<body>
+    <input type="text" name="" id="tm">
+    <button>Click Me</button> <br><br>
+    <span></span><br>
+    <p></p>
+    <script>
+
+
+
+        var btn = document.querySelector('button');
+        btn.addEventListener("click", () => {
+
+            var t = document.querySelector('input').value;
+
+            var sp = document.querySelector("span");
+
+            var sel = t.split(" ");
+
+            var r = "<select onchange='demo(this)'>"
+            for (a of sel) {
+                r = r + "<option>" + a + "</option>";
+            }
+            r = r + "</select>"
+            sp.innerHTML = r;
+
+        });
+        function demo(x) {
+            document.querySelector("p").innerHTML = x.value.fontcolor("red");
+            alert(x.value)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

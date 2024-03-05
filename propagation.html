@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Click Me</button>
+    </div>
+    <script>
+        function demo1()
+        {
+            alert("Div")
+            event.stopPropagation()
+        }
+        function demo2()
+        {
+            alert('button')
+            event.stopPropagation()
+        }
+        document.querySelector('button').addEventListener('click',demo2);
+        document.querySelector('div').addEventListener('click',demo1)
+    </script>
+</body>
+</html>
